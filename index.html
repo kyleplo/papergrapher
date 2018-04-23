@@ -18,8 +18,17 @@
 <body>
 	<canvas id="paperCanvas" data-paper-resize="true" data-paper-hidpi="off"></canvas>
 	
-	<div id="loadingScreen" class="loadingScreen">
+	<div id="loadingScreen">
 		<div class="panel">Loading...</div>
+	</div>
+	<div class="hidden">
+	<!-- Odd errors if these don't exist -->
+	<select id="opacitySelect" class="opacitySelect comboSelect" title="Opacity">
+	<option class="hidden" selected value=""></option>
+		</select>
+	<select id="blendModeSelect" class="blendModeSelect">
+	<option class="hidden" selected value="normal">normal</option>
+		</select>
 	</div>
 	
 	<div id="toolbar" class="toolbar">
@@ -52,15 +61,13 @@
 			<input type="number"  min="0" max="6000" maxlength="4" id="zoomInput" value="100" class="zoomInput comboInput"/>
 			<select id="zoomSelect" class="zoomSelect comboSelect">
 				<option class="hidden" selected value=""></option>
-				<option value="10">1000%</option>
 				<option value="5">500%</option>
-				<option value="3">300%</option>
 				<option value="2">200%</option>
 				<option value="1.5">150%</option>
 				<option value="1">100%</option>
+				<option value="0.9">90%</option>
+				<option value="0.75">75%</option>
 				<option value="0.5">50%</option>
-				<option value="0.2">20%</option>
-				<option value="0.1">10%</option>
 			</select>
 		</div>
 		
@@ -125,18 +132,13 @@
 	<!-- tools -->
 	
 	<script src="js/tools/select.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
-	<script src="js/tools/detailselect.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
 	<script src="js/tools/draw.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
-	<script src="js/tools/bezier.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
-	<script src="js/tools/cloud.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
-	<script src="js/tools/broadbrush.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
 	<script src="js/tools/text.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
 	<script src="js/tools/eyedropper.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
 	<script src="js/tools/circle.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
 	<script src="js/tools/rectangle.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
 	<script src="js/tools/rotate.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
 	<script src="js/tools/scale.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
-	<script src="js/tools/exportrect.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
 	<script src="js/tools/zoom.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
 	<script src="js/tools/viewgrab.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
 	<script src="js/tools/viewzoom.js" type="text/paperscript" data-paper-canvas="paperCanvas"></script>
