@@ -1,12 +1,12 @@
 
 .toolOptionPanel {
 	position: absolute;
-	top: 38px;
-	left: 84px;
+	top: 358px!important;
+	left: 0px!important;
 	background-color: #fff;
 	padding: 8px 10px 10px 10px;
 	border-radius: 0 0 3px 3px;
-	min-width: 90px;
+	width: 152px!important
 }
 
 .toolOptionPanel .options {
@@ -33,7 +33,6 @@
 	font-size: 0.85em;
 	margin: -7px -10px 6px -10px;
 	padding: 5px 10px;
-	cursor: move;
 	color: #999;
 	display:inline;
 }
@@ -87,14 +86,7 @@
 }
 
 .toolOptionPanel .toolOptionResetButton {
-	position: absolute;
-	width: 16px;
-	height: 16px;
-	top: 9px;
-	right: 10px;
-	text-align: center;
-	padding: 1px;
-	line-height: 0;
+        display: none;
 }
 
 .toolOptionPanel .note,
