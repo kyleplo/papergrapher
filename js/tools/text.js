@@ -36,10 +36,6 @@ pg.tools.text = function () {
 			label: 'Size',
 			min: 0
 		},
-		letterSpacing: {
-			type: 'int',
-			label: 'Spacing'
-		},
 		fontTextInput: {
 			type: 'text',
 			label: 'Text'
@@ -207,10 +203,10 @@ pg.tools.text = function () {
 	};
 	
 	var setupFontImportSection = function() {
-		var $fontImportLabel = jQuery('<label>Import</label>');
+		var $fontImportLabel = jQuery('<label>Import Font</label>');
 		var $fontImportButton = jQuery('<input id="fontImportInput" type="file" multiple accept=".ttf, .otf, .woff" >');
-		var $fontImportSection = jQuery('<div class="option-section" data-id="fontImport">');
-		var $fontImportFakeButton = jQuery('<button class="fontImportFakeButton">Choose</button>');
+		var $fontImportSection = jQuery('<div class="option-section" data-id="fontImport" id="fontImport">');
+		var $fontImportFakeButton = jQuery('<label for="fontImport"><button class="fontImportButton">Choose</button></label>');
 		$fontImportSection.append($fontImportLabel, $fontImportButton, $fontImportFakeButton);
 		jQuery('.toolOptionPanel .options').prepend($fontImportSection);
 		$fontImportButton.on('change', function(e) {
@@ -298,12 +294,9 @@ pg.tools.text = function () {
 	var setupInputField = function() {
 		$textInput = jQuery('#textToolInput');
 		$textInput.focus();
-		$textInput.keyup(function (event) {
+		$textInput.blur(function (event) {
 			createItem(jQuery(this).val(), creationPoint);
 			rebuildFontSizeInput();
-			if (event.keyCode === 13) {
-				finalizeInput();
-			}
 		});
 	};
 
