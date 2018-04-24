@@ -45,7 +45,7 @@
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: 46px;
-
+}
 .tool:hover,
 .tool.active {
 	background-color: #e2e2e2;
