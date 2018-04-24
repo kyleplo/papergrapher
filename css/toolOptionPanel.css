@@ -55,9 +55,8 @@
 }
 
 .toolOptionPanel input[type=file] {
-	width: 87px;
 	border: none;
-	opacity: 0;
+	display: none;
 }
 
 .toolOptionPanel label {
@@ -101,9 +100,8 @@
 	color: #e4141b;
 }
 
-.toolOptionPanel .option-section .fontImportFakeButton {
+.toolOptionPanel .option-section .fontImportButton {
 	position: absolute;
 	width: 80px;
 	right: 0;
-	pointer-events: none;
 }
